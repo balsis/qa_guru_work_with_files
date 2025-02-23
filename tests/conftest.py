@@ -14,7 +14,7 @@ class FileExtension(Enum):
     PDF = ".pdf"
 
 
-@pytest.fixture(scope = "class", autouse = True)
+@pytest.fixture(scope = "module", autouse = True)
 def create_archive():
     if not os.path.exists(Paths.ARCHIVE_PATH):
         os.mkdir(Paths.ARCHIVE_PATH)
